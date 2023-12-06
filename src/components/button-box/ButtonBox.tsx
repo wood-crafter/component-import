@@ -1,5 +1,5 @@
 import Dummy from './DummyComponent';
-import { onHandleExternalPageOpen } from '../../util/index';
+import { onHandleExternalPageOpen, openPopup } from '../../util/index';
 import './index.css';
 
 interface params {
@@ -388,6 +388,7 @@ function ButtonBox(params: params) {
 
   return (
     <div className="button-box-container">
+      <button onClick={openPopup}>Click me</button>
       <div className="el-row">
         {pageRenderData.map((item, index) => (
           <div style={{ marginLeft: '10px' }} key={index}>
